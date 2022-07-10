@@ -6,6 +6,27 @@ public class Question14 {
         System.out.println(mostOccurringNumber(new int[]{6,8,1,8,2}));
     }
 
+    //simplified solution
+    public static int answerTwo(int [] a){
+       int counter = 0;
+       int mostOccur = 0;
+       for(int i = 0; i<a.length;i++){
+           int tempCounter = 0;
+           for(int j = 0 ; j < a.length;j++){
+               if(a[i] == a[j] && i!=j){
+                   tempCounter ++;
+               }
+           }
+           if(tempCounter > counter && tempCounter > 1){
+               counter = tempCounter;
+               mostOccur = a[i];
+           }
+       }
+       return mostOccur;
+    }
+    
+    //////////
+    
     static int mostOccurringNumber(int[] a) {
         int counter = 0;
         int temp = 0;
