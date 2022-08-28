@@ -1,0 +1,29 @@
+
+question 2
+TRUE 
+
+question 3
+
+A bridge table is a type of intermediary table that is used to store the relationship between two data items. In a relational database, a bridge table is often used to connect two different data tables that are related to each other.
+
+question 4
+
+SELECT * 
+FROM person 
+JOIN car ON person.id = car.person_id 
+WHERE person.firstName LIKE 'M%' 
+AND car.year < 2000
+
+Explanation:
+question 2
+
+"A foreign key is a field in a relational table that matches the primary key of another table. The foreign key can be used to cross-reference tables, allowing data in the" two tables to be related. In a relational database having only one table, this table cannot have any foreign key because there is no other table for the foreign key to reference.
+question 3
+
+A bridge table is a type of relational table that is used to connect two other tables that have a many-to-many relationship with each other. A bridge table contains no primary key or foreign key of its own, but it contains the primary keys of the two other tables that it connects. This allows the bridge table to act as a link between the two other tables.
+A bridge table is often used to connect two tables that contain data that is related to each other in some way. For example, a bridge table may be used to connect a table of employees with a table of departments. Each employee "may be associated with multiple departments, and each department may be associated with multiple employees. In this case, the bridge table would contain the primary key of the" employee table and the primary key of the department table.
+question 4
+
+The code above selects all persons who have first name starting with 'M' and have a car before year 2000. It does this by joining the person and car tables on the person_id column, then filtering for rows where the firstName column starts with 'M' and the year column is less than 2000.
+The ER diagram helps in getting the SQL code because it shows the relationships between the tables. In this case, it shows that the person table is related to the car table via the person_id column. This allows us to join the two tables and get the data we need.
+The main functions in the code are the SELECT, FROM, and WHERE clauses. The SELECT clause specifies the columns to return, the FROM clause specifies the tables to query, and the WHERE clause specifies the conditions that rows must meet in order to be included in the result set.
